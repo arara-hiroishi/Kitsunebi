@@ -86,6 +86,10 @@ internal class KBVideoEngine: NSObject {
     guard !isCompleted else { return }
     displayLink.isPaused = false
   }
+
+  public func stop() {
+    finish()
+  }
   
   private func finish() {
     displayLink.isPaused = true

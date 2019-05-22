@@ -68,6 +68,18 @@ open class KBAnimationView: UIView, KBVideoEngineUpdateDelegate, KBVideoEngineDe
     engineInstance?.delegate = self
     try engineInstance?.play()
   }
+
+  public func pause() {
+    engineInstance?.pause()
+  }
+    
+  public func resume() {
+    engineInstance?.resume()
+  }
+    
+  public func stop() {
+    engineInstance?.stop()
+  }
   
   override open class var layerClass: Swift.AnyClass {
     return CAEAGLLayer.self
